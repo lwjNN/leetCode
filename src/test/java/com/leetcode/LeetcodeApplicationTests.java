@@ -8,6 +8,9 @@ class LeetcodeApplicationTests {
 
     @Test
     void contextLoads() {
+        int a = 9;
+        int b = 5;
+        System.out.println(a&b<<1);
     }
 
 }
