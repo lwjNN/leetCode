@@ -2,16 +2,28 @@ package com.leetcode.other;
 
 import com.leetcode.util.TimeTool;
 
-import java.lang.reflect.Method;
-import java.security.Timestamp;
 
 /**
  * 斐波那契数列两种方式实现
  * 1,1,2,3,5,8,13,21,34
- * 1、递归
+ * 1、递归(最慢)
  * 2、更新赋值
+ * 3、动态规划，和第二种差别不大。时间基本相等
  */
 public class Fibonacci {
+
+    public static int fib_dp(int n){
+        int[] dp = new int[n];
+        dp[0] = 1;
+        dp[1] = 1;
+        int res = 0;
+        for (int i = 2; i < n; i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+            res = dp[i];
+        }
+        return res;
+    }
+
     public static int fibRecursive(int n){
         if(n<3){
             return 1;
@@ -38,16 +50,27 @@ public class Fibonacci {
         TimeTool.check("fibRecursive", new TimeTool.Task() {
             @Override
             public void excute() {
-                System.out.println(fibRecursive(50));
+                System.out.println(fibRecursive(30));
             }
         });
 
         TimeTool.check("fibCycle", new TimeTool.Task() {
             @Override
             public void excute() {
-                System.out.println(fibCycle(50));
+                System.out.println(fibCycle(20000));
             }
         });
+
+        TimeTool.check("fib_dp", new TimeTool.Task() {
+            @Override
+            public void excute() {
+                System.out.println(fib_dp(20000));
+            }
+        });
+
+
+
+
     }
 
 }

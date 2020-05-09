@@ -1,25 +1,31 @@
 package com.suanfatujie;
 
+import java.util.Arrays;
+
 public class selectSort {
 
-    public int findMin(int[] arr){
-        int smallest = arr[0];
-        int smallest_index = 0;
-
+    public static int[] selectionSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            if(smallest<arr[i]){
-                smallest = arr[i];
-                smallest_index = i;
+            int max = 0;
+            int index = 0;
+            for (int j = 0; j < arr.length - i; j++) {
+                if (max < arr[j]) {
+                    max = arr[j];
+                    index = j;
+                }
             }
+
+            int temp = arr[arr.length - i - 1];
+            arr[arr.length-i-1] = max;
+            arr[index] = temp;
         }
-        return smallest_index;
+        return arr;
     }
 
-    public void selectionSort(int[] arr){
-        int[] newArr = {};
-        for (int i = 0; i < arr.length; i++) {
-            int min_index = findMin(arr);
-        }
+    public static void main(String[] args) {
+        int[] arr = {3,5,2,7,1};
+        int[] ints = selectionSort(arr);
+        System.out.println(Arrays.toString(ints));
     }
 
 }
