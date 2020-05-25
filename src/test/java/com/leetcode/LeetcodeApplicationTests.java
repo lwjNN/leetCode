@@ -1,16 +1,17 @@
 package com.leetcode;
 
-import org.junit.jupiter.api.Test;
+import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.apache.commons.lang3.time.DateUtils;
+
+import java.util.Date;
 
 @SpringBootTest
 class LeetcodeApplicationTests {
 
-    @Test
-    void contextLoads() {
-        int a = 9;
-        int b = 5;
-        System.out.println(a&b<<1);
+    public static void main(String[] args) {
+        Date date = DateUtils.addDays(new Date(), -3);
+        System.out.println(date);
     }
 
 }

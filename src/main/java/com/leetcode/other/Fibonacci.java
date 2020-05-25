@@ -50,21 +50,21 @@ public class Fibonacci {
         TimeTool.check("fibRecursive", new TimeTool.Task() {
             @Override
             public void excute() {
-                System.out.println(fibRecursive(30));
+                System.out.println(fibRecursive(50));
             }
         });
 
         TimeTool.check("fibCycle", new TimeTool.Task() {
             @Override
             public void excute() {
-                System.out.println(fibCycle(20000));
+                System.out.println(fibCycle(50));
             }
         });
 
         TimeTool.check("fib_dp", new TimeTool.Task() {
             @Override
             public void excute() {
-                System.out.println(fib_dp(20000));
+                System.out.println(fib_dp(50));
             }
         });
 
