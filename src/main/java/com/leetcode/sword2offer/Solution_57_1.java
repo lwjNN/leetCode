@@ -17,7 +17,7 @@ import java.util.Arrays;
  * @author LWJ
  * @date 2020/6/8 10:25
  */
-public class Solution_57 {
+public class Solution_57_1 {
     //普通思路，双重遍历，每次遍历，就查询数组剩下的元素是否等于target-nums[i]
     //时间复杂度O（NlogN）
     public int[] twoSum(int[] nums, int target) {

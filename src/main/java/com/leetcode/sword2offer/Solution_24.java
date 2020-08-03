@@ -47,6 +47,18 @@ public class Solution_24 {
         return pre;
     }
 
+    public ListNode reverseList2(ListNode head){
+        ListNode cur = head;
+        ListNode pre = null;
+        while (cur != null){
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+        return pre;
+    }
+
 
     public class ListNode {
         int val;
