@@ -1,6 +1,11 @@
 package com.leetcode.arrays;
 
+import org.apache.commons.lang3.time.DateUtils;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * 给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
@@ -77,13 +82,17 @@ public class mergeTowSortedLinked_88 {
         System.out.println("2***" + Arrays.toString(num1));
     }
 
-    public static void main(String[] args) {
-        int[] arr1 = {1, 8, 9, 0, 0, 0};
-        int[] arr2 = {2, 5, 6};
-        merge_twoPoints(arr1, 3, arr2, 3);
-        int[] arr3 = {0};
-        int[] arr4 = {1};
-        merge_reverseTwoPoints(arr3, 0, arr4, 1);
-//        System.arraycopy(arr2,1,arr1,3,2);
+    public static void main(String[] args) throws ParseException {
+//        int[] arr1 = {1, 8, 9, 0, 0, 0};
+////        int[] arr2 = {2, 5, 6};
+////        merge_twoPoints(arr1, 3, arr2, 3);
+////        int[] arr3 = {0};
+////        int[] arr4 = {1};
+////        merge_reverseTwoPoints(arr3, 0, arr4, 1);
+//////        System.arraycopy(arr2,1,arr1,3,2);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(sdf.parse("2020-09-01"));
+        System.out.println(DateUtils.parseDate("2020-09-02","yyyy-MM-dd"));
+        System.out.println(DateUtils.addDays(DateUtils.parseDate("2020-09-02","yyyy-MM-dd"), 3));
     }
 }
