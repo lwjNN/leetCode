@@ -100,7 +100,7 @@ public class Solution_17 {
 
     public static void main(String[] args) {
         Solution_17 s = new Solution_17();
-        s.letterCombinations_1("23");
+        System.out.println(s.letterCombinations("23"));
     }
 }
 
